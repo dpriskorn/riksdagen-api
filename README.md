@@ -7,3 +7,6 @@ See http://data.riksdagen.se/dokumentation/ for specification.
 * Writing this library I intentionally tried 
   using Test Driven Development. This proved to be 
   a valuable exercise!
+  
+## License
+GPLv3+
