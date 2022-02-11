@@ -3,9 +3,9 @@ from unittest import TestCase
 
 import rich as rich
 
-from models.dokumentlista import Dokumentlista
-from models.exceptions import DocumentNotFound
-from models.riksdagen import Riksdagen
+from src.models import Dokumentlista
+from src.models.exceptions import DocumentNotFound
+from src.models import Riksdagen
 
 
 class TestRiksdagen(TestCase):

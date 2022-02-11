@@ -2,7 +2,7 @@ from typing import List
 
 from pydantic import BaseModel
 
-from models.dokument import Dokument
+from src.models.dokument import Dokument
 
 
 class Dokumentlista(BaseModel):
