@@ -7,7 +7,8 @@ from src.models.exceptions import DocumentNotFound
 
 class Riksdagen(BaseModel):
 
-    def lookup_document_html_by_id(self, id: str):
+    @staticmethod
+    def lookup_document_html_by_id(id: str):
         base_url = "https://data.riksdagen.se/dokument/"
         params = {
             "Accept": "application/json"
@@ -20,7 +21,8 @@ class Riksdagen(BaseModel):
         else:
             raise ValueError(f"Got {response.status_code} from Riksdagen, {response.text}")
 
-    def lookup_document_metadata_by_id(self, id: str):
+    @staticmethod
+    def lookup_document_metadata_by_id(id: str):
         base_url = f"https://data.riksdagen.se/dokumentlista/?sok={id}&doktyp=&rm=&from=&tom=&ts=&bet=&tempbet=&nr=&org=&iid=&avd=&webbtv=&talare=&exakt=&planering=&facets=&sort=rel&sortorder=desc&rapport=&utformat=json&a=s#soktraff"
         params = {
             "Accept": "application/json"
