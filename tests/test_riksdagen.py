@@ -1,11 +1,9 @@
 from datetime import datetime
 from unittest import TestCase
 
-import rich as rich
-
-from src.models import Dokumentlista
+from src.models.dokumentlista import Dokumentlista
 from src.models.exceptions import DocumentNotFound
-from src.models import Riksdagen
+from src.models.riksdagen import Riksdagen
 
 
 class TestRiksdagen(TestCase):
@@ -38,7 +36,7 @@ class TestRiksdagen(TestCase):
     def test_lookup_document_metadata_by_id_response(self):
         rd = Riksdagen()
         dokumentlista = rd.lookup_document_metadata_by_id("GZ01MJU21")
-        rich.print(dokumentlista)
+        # print(dokumentlista)
         if not dokumentlista:
             self.fail()
         if not isinstance(dokumentlista, Dokumentlista):
