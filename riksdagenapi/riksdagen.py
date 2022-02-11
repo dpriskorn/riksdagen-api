@@ -1,8 +1,8 @@
 import requests
 from pydantic import BaseModel
 
-from src.models.dokumentlista import Dokumentlista
-from src.models.exceptions import DocumentNotFound
+from riksdagenapi.dokumentlista import Dokumentlista
+from riksdagenapi.exceptions import DocumentNotFound
 
 
 class Riksdagen(BaseModel):
@@ -10,9 +10,6 @@ class Riksdagen(BaseModel):
     @staticmethod
     def lookup_document_html_by_id(id: str):
         base_url = "https://data.riksdagen.se/dokument/"
-        params = {
-            "Accept": "application/json"
-        }
         response = requests.get(base_url + id, params=None)
         if response.status_code == 200:
             return response.text
