@@ -4,6 +4,7 @@ from pydantic import BaseModel
 
 
 class Dokument(BaseModel):
+    """This models a document in Riksdagen"""
     datum: str
     id: str
 
