@@ -1,8 +1,8 @@
 import requests
 from pydantic import BaseModel
 
-from riksdagenapi.dokumentlista import Dokumentlista
-from riksdagenapi.exceptions import DocumentNotFound
+from src.dokumentlista import Dokumentlista
+from src.exceptions import DocumentNotFound
 
 
 class Riksdagen(BaseModel):
