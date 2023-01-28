@@ -1,11 +1,11 @@
 [tool.poetry]
-name = "riksdagen-api"
+name = "riksdagenapi"
 version = "0.0.3"
 description = "Libray for accessing the Riksdagen API"
 #author_email = "dp_public@riseup.net"
 #long_description = "file: README.md"
 #long_description_content_type = "text/markdown"
-keywords = ["riksdagen"]
+keywords = ["riksdagen", "swedish parliament", "parliament", "open data"]
 authors = ["Dennis Priskorn"]
 packages = [{include = "src"}]
 license = "GPLv3+"
