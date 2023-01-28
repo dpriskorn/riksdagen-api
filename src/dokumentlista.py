@@ -2,7 +2,7 @@ from typing import List
 
 from pydantic import BaseModel
 
-from riksdagenapi.dokument import Dokument
+from src.dokument import Dokument
 
 
 class Dokumentlista(BaseModel):

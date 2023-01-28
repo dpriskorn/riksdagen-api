@@ -1,0 +1,18 @@
+name: lint_python
+on: [push]
+jobs:
+  lint_python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install poetry
+        run: pipx install poetry
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 3.x
+          cache: 'poetry'
+#      - name: Redis Server in GitHub Actions
+#        uses: supercharge/redis-github-action@1.4.0
+      - run: pip install --upgrade pip wheel
+      - run: poetry install --with=dev
+      - run: poetry run pytest .

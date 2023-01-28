@@ -1,9 +1,9 @@
 from datetime import datetime
 from unittest import TestCase
 
-from riksdagenapi.dokumentlista import Dokumentlista
-from riksdagenapi.exceptions import DocumentNotFound
-from riksdagenapi.riksdagen import Riksdagen
+from src.dokumentlista import Dokumentlista
+from src.exceptions import DocumentNotFound
+from src.__init__ import Riksdagen
 
 
 class TestRiksdagen(TestCase):
